@@ -68,8 +68,6 @@ func (h *messageHandler) HandleMessage(m *nsq.Message) error {
 	log.Println("--------------------")
 	log.Println("")
 
-	//sendMsg(request.Name, request.Content)
-
 	// Will automatically set the message as finish
 	return nil
 }

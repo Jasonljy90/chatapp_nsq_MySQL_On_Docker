@@ -48,10 +48,6 @@ func getEnvVars() {
 	}
 }
 
-// type ChatHandler struct {
-// 	conn *net.TCPConn
-// }
-// func (c ChatHandler) userChat(res http.ResponseWriter, req *http.Request) {
 func userChat(res http.ResponseWriter, req *http.Request) {
 	if req.Method == http.MethodPost {
 		msgName := req.FormValue("messagename")
@@ -72,11 +68,6 @@ func userChat(res http.ResponseWriter, req *http.Request) {
 		}
 		SendMsg(msgName, msgContent) // publish message to producer
 	}
-	// var buf []byte
-	// _, err := c.conn.Read(buf[0:])
-	// if err != nil {
-	// 	panic(err) // handle error later
-	// }
 	tpl.ExecuteTemplate(res, "chatAgentRider.gohtml", nil)
 }
 
@@ -111,5 +102,4 @@ func main() {
 	router.HandleFunc("/usertoken/{token}", resetUserPasswordLinkClicked)
 	fmt.Println("server is up")
 	http.ListenAndServe(":5221", router)
-
 }

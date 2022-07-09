@@ -12,10 +12,12 @@ import (
 	"github.com/gorilla/mux"
 )
 
-// MinTokenLength is the minimum allowed length of token string.
-// It is useful for avoiding DoS attacks with very long tokens: before passing
-// a token to VerifyToken function, check that it has length less than [the
-// maximum login length allowed in your application] + MinTokenLength.
+/*
+MinTokenLength is the minimum allowed length of token string.
+It is useful for avoiding DoS attacks with very long tokens: before passing
+a token to VerifyToken function, check that it has length less than [the
+maximum login length allowed in your application] + MinTokenLength.
+*/
 var (
 	MinTokenLength = authcookie.MinLength
 )
