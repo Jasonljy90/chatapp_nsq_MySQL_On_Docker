@@ -1,0 +1,4 @@
+Error: 2021/09/01 15:04:29 database.go:23: Error inserting record into database
+Error: 2021/09/01 15:20:14 database.go:23: Error inserting record into database
+Error: 2021/09/02 16:52:33 database.go:23: Error inserting record into database
+Error: 2022/07/09 12:54:30 database.go:22: Error inserting record into database
